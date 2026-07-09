@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IT Help Desk Ticket System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>IT Help Desk Ticket System</h1>
+    <p>Create and track basic IT support tickets.</p>
+
+    <input type="text" id="userName" placeholder="User Name">
+    <input type="text" id="issueType" placeholder="Issue Type">
+
+    <select id="priority">
+      <option value="Low">Low Priority</option>
+      <option value="Medium">Medium Priority</option>
+      <option value="High">High Priority</option>
+      <option value="Critical">Critical</option>
+    </select>
+
+    <select id="status">
+      <option value="Open">Open</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Resolved">Resolved</option>
+      <option value="Escalated">Escalated</option>
+    </select>
+
+    <textarea id="notes" placeholder="Describe the issue, troubleshooting steps, and resolution notes."></textarea>
+
+    <button onclick="addTicket()">Add Ticket</button>
+
+    <h2>Ticket Log</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Issue Type</th>
+          <th>Priority</th>
+          <th>Status</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody id="ticketTable"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
